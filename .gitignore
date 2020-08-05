@@ -1,0 +1,4 @@
+training-images/
+*.png
+*DS_Store
+*idea/
