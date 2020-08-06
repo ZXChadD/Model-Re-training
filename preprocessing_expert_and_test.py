@@ -2,12 +2,13 @@ import pickle
 import random
 from matplotlib import pyplot
 from PIL import Image
+from pascal_voc_writer import Writer
 
 cifar10_path = 'cifar-10-batches-py'
 width_of_original_image = 32
 height_of_original_image = 32
 max_img_on_bg = 20
-max_images = 101
+max_images = 500
 
 
 def main():
@@ -35,7 +36,8 @@ def create_training_data():
             coordinates = (x_coordinates, y_coordinates)
             all_coordinates.add(coordinates)
 
-
+    ####### initialise a writer to create a pascal voc file #######
+    writer = Writer('expert-training/' + str(bg_id) + '.jpg', 256, 256)
 
     for x in range(0, max_images):
         print("Image Number: " + str(x))
@@ -46,14 +48,18 @@ def create_training_data():
 
         # once the desired number of images have been placed on the background, create a new background
         if img_on_bg > max_img_on_bg:
-            bg.save('training-images/' + str(bg_id) + '.jpg', 'JPEG')
+            bg.save('expert-training/' + str(bg_id) + '.jpg', 'JPEG')
             img_on_bg = 1
             bg_id += 1
             bg = Image.new('RGB', (256, 256), (0, 0, 0))
             all_images = []
             excluded_coordinates = set()
 
+            ####### save pascal voc file #######
+            writer.save('expert-training/' + str(bg_id) + '.xml')
 
+            ####### initialise a writer to create a pascal voc file #######
+            writer = Writer('expert-training/' + str(bg_id) + '.jpg', 256, 256)
 
 
         img_w, img_h = resized_image.size
@@ -74,6 +80,7 @@ def create_training_data():
                     all_images) != 0:
                 continue
             else:
+
                 img_on_bg += 1
 
                 # place the image on the background
@@ -82,6 +89,8 @@ def create_training_data():
                 # store the location information of the image
                 all_images.append(current_image)
 
+                ####### add object to pascal voc file #######
+                writer.addObject(name_of_object, x1, 256 - y1, x1 + img_w, 256 - y1 + img_h)
 
                 # add to the excluded coordinates list
                 for x_coordinates in range(x1, x1 + img_w):
