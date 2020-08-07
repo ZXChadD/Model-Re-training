@@ -1,4 +1,6 @@
 training-images/
+test-images/
+expert-images/
 *.png
 *DS_Store
 *idea/

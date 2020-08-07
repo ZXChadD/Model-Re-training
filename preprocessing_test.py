@@ -2,6 +2,7 @@ import pickle
 import random
 from matplotlib import pyplot
 from PIL import Image
+from PIL import ImageDraw
 from pascal_voc_writer import Writer
 
 cifar10_path = 'cifar-10-batches-py'
@@ -37,7 +38,7 @@ def create_training_data():
             all_coordinates.add(coordinates)
 
     ####### initialise a writer to create a pascal voc file #######
-    writer = Writer('expert-training/' + str(bg_id) + '.jpg', 256, 256)
+    writer = Writer('test-images/' + str(bg_id) + '.jpg', 256, 256)
 
     for x in range(0, max_images):
         print("Image Number: " + str(x))
@@ -47,20 +48,20 @@ def create_training_data():
         resized_image = resize_image(images[x])
 
         # once the desired number of images have been placed on the background, create a new background
-        if img_on_bg > max_img_on_bg:
-            bg.save('expert-training/' + str(bg_id) + '.jpg', 'JPEG')
+        if img_on_bg > max_img_on_bg or x == max_images - 1:
+            bg.save('test-images/' + str(bg_id) + '.jpg', 'JPEG')
             img_on_bg = 1
+
+            ####### save pascal voc file #######
+            writer.save('test-images/' + str(bg_id) + '.xml')
             bg_id += 1
+
             bg = Image.new('RGB', (256, 256), (0, 0, 0))
             all_images = []
             excluded_coordinates = set()
 
-            ####### save pascal voc file #######
-            writer.save('expert-training/' + str(bg_id) + '.xml')
-
             ####### initialise a writer to create a pascal voc file #######
-            writer = Writer('expert-training/' + str(bg_id) + '.jpg', 256, 256)
-
+            writer = Writer('test-images/' + str(bg_id) + '.jpg', 256, 256)
 
         img_w, img_h = resized_image.size
 
@@ -90,7 +91,12 @@ def create_training_data():
                 all_images.append(current_image)
 
                 ####### add object to pascal voc file #######
-                writer.addObject(name_of_object, x1, 256 - y1, x1 + img_w, 256 - y1 + img_h)
+                if name_of_object != 'horse':
+                    writer.addObject(name_of_object, x1, 256 - y1, x1 + img_w, 256 - y1 + img_h)
+
+                # draw rectangles
+                # img1 = ImageDraw.Draw(bg)
+                # img1.rectangle([(x1, 256 - y1), (x1 + img_w, 256 - y1 + img_h)], outline=(255, 0, 0), fill=None)
 
                 # add to the excluded coordinates list
                 for x_coordinates in range(x1, x1 + img_w):
@@ -103,7 +109,7 @@ def create_training_data():
 
 # load the cifar dataset
 def load_cfar10_batch(cifar10_path, batch_id):
-    with open(cifar10_path + '/data_batch_' + str(batch_id), mode='rb') as file:
+    with open(cifar10_path + '/test_batch', mode='rb') as file:
         batch = pickle.load(file, encoding='latin1')
 
     images = batch['data'].reshape((len(batch['data']), 3, 32, 32)).transpose(0, 2, 3, 1)
