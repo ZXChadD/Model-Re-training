@@ -1,40 +1,36 @@
 item {
-    id: 1
-    name: ‘airplane’
+name: "airplane"
+id: 1
 }
 item {
-    id: 2
-    name: 'automobile'
+name: "automobile"
+id: 2
 }
 item {
-    id: 3
-    name: 'bird'
+name: "bird"
+id: 3
 }
 item {
-    id: 4
-    name: 'cat'
+name: "cat"
+id: 4
 }
 item {
-    id: 5
-    name: 'deer'
+name: "deer"
+id: 5
 }
 item {
-    id: 6
-    name: 'dog'
+name: "dog"
+id: 6
 }
 item {
-    id: 7
-    name: 'frog'
+name: "frog"
+id: 7
 }
 item {
-    id: 8
-    name: 'horse'
+name: "ship"
+id: 9
 }
 item {
-    id: 9
-    name: 'ship'
-}
-item {
-    id: 10
-    name: 'truck'
+name: "truck"
+id: 10
 }
