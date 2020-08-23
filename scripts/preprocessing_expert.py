@@ -9,6 +9,7 @@ cifar10_path = 'cifar-10-batches-py'
 width_of_original_image = 32
 height_of_original_image = 32
 max_img_on_bg = 20
+start_image = 4000
 max_images = 5000
 
 
@@ -38,9 +39,9 @@ def create_training_data():
             all_coordinates.add(coordinates)
 
     ####### initialise a writer to create a pascal voc file #######
-    writer = Writer('/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/expert/' + str(bg_id) + '.jpg', 256, 256)
+    writer = Writer('/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/expert-validation/' + str(bg_id) + '.jpg', 256, 256)
 
-    for x in range(0, max_images):
+    for x in range(start_image, max_images):
         print("Image Number: " + str(x))
         label_names = load_label_names()
         name_of_object = label_names[labels[x]]
@@ -49,11 +50,11 @@ def create_training_data():
 
         # once the desired number of images have been placed on the background, create a new background
         if img_on_bg > max_img_on_bg or x == max_images - 1:
-            bg.save('/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/expert/' + str(bg_id) + '.jpg', 'JPEG')
+            bg.save('/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/expert-validation/' + str(bg_id) + '.jpg', 'JPEG')
             img_on_bg = 1
 
             ####### save pascal voc file #######
-            writer.save('/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/expert/' + str(bg_id) + '.xml')
+            writer.save('/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/expert-validation/' + str(bg_id) + '.xml')
             bg_id += 1
 
             bg = Image.new('RGB', (256, 256), (0, 0, 0))
@@ -61,7 +62,7 @@ def create_training_data():
             excluded_coordinates = set()
 
             ####### initialise a writer to create a pascal voc file #######
-            writer = Writer('/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/expert/' + str(bg_id) + '.jpg', 256, 256)
+            writer = Writer('/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/expert-validation/' + str(bg_id) + '.jpg', 256, 256)
 
         img_w, img_h = resized_image.size
 

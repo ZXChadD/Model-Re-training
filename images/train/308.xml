@@ -17,10 +17,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>116</xmin>
-            <ymin>211</ymin>
-            <xmax>142</xmax>
-            <ymax>237</ymax>
+            <xmin>158</xmin>
+            <ymin>201</ymin>
+            <xmax>193</xmax>
+            <ymax>236</ymax>
         </bndbox>
     </object>    <object>
         <name>deer</name>
@@ -28,10 +28,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>129</xmin>
-            <ymin>17</ymin>
-            <xmax>155</xmax>
-            <ymax>43</ymax>
+            <xmin>43</xmin>
+            <ymin>208</ymin>
+            <xmax>72</xmax>
+            <ymax>237</ymax>
         </bndbox>
     </object>    <object>
         <name>automobile</name>
@@ -39,10 +39,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>41</xmin>
-            <ymin>24</ymin>
-            <xmax>79</xmax>
-            <ymax>62</ymax>
+            <xmin>29</xmin>
+            <ymin>120</ymin>
+            <xmax>61</xmax>
+            <ymax>152</ymax>
         </bndbox>
     </object>    <object>
         <name>dog</name>
@@ -50,10 +50,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>48</xmin>
-            <ymin>170</ymin>
-            <xmax>77</xmax>
-            <ymax>199</ymax>
+            <xmin>2</xmin>
+            <ymin>193</ymin>
+            <xmax>34</xmax>
+            <ymax>225</ymax>
         </bndbox>
     </object>    <object>
         <name>dog</name>
@@ -61,10 +61,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>140</xmin>
-            <ymin>154</ymin>
-            <xmax>169</xmax>
-            <ymax>183</ymax>
+            <xmin>87</xmin>
+            <ymin>15</ymin>
+            <xmax>122</xmax>
+            <ymax>50</ymax>
         </bndbox>
     </object>    <object>
         <name>dog</name>
@@ -72,10 +72,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>32</xmin>
-            <ymin>121</ymin>
-            <xmax>70</xmax>
-            <ymax>159</ymax>
+            <xmin>5</xmin>
+            <ymin>8</ymin>
+            <xmax>21</xmax>
+            <ymax>24</ymax>
         </bndbox>
     </object>    <object>
         <name>bird</name>
@@ -83,10 +83,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>215</xmin>
-            <ymin>37</ymin>
-            <xmax>234</xmax>
-            <ymax>56</ymax>
+            <xmin>213</xmin>
+            <ymin>60</ymin>
+            <xmax>235</xmax>
+            <ymax>82</ymax>
         </bndbox>
     </object>    <object>
         <name>airplane</name>
@@ -94,10 +94,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>89</xmin>
-            <ymin>59</ymin>
-            <xmax>121</xmax>
-            <ymax>91</ymax>
+            <xmin>176</xmin>
+            <ymin>72</ymin>
+            <xmax>202</xmax>
+            <ymax>98</ymax>
         </bndbox>
     </object>    <object>
         <name>truck</name>
@@ -105,10 +105,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>95</xmin>
-            <ymin>156</ymin>
-            <xmax>133</xmax>
-            <ymax>194</ymax>
+            <xmin>205</xmin>
+            <ymin>153</ymin>
+            <xmax>243</xmax>
+            <ymax>191</ymax>
         </bndbox>
     </object>    <object>
         <name>bird</name>
@@ -116,10 +116,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>150</xmin>
-            <ymin>207</ymin>
-            <xmax>176</xmax>
-            <ymax>233</ymax>
+            <xmin>212</xmin>
+            <ymin>25</ymin>
+            <xmax>238</xmax>
+            <ymax>51</ymax>
         </bndbox>
     </object>    <object>
         <name>truck</name>
@@ -127,54 +127,54 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>122</xmin>
-            <ymin>102</ymin>
-            <xmax>154</xmax>
-            <ymax>134</ymax>
-        </bndbox>
-    </object>    <object>
-        <name>truck</name>
-        <pose>Unspecified</pose>
-        <truncated>0</truncated>
-        <difficult>0</difficult>
-        <bndbox>
-            <xmin>182</xmin>
-            <ymin>67</ymin>
-            <xmax>220</xmax>
-            <ymax>105</ymax>
-        </bndbox>
-    </object>    <object>
-        <name>dog</name>
-        <pose>Unspecified</pose>
-        <truncated>0</truncated>
-        <difficult>0</difficult>
-        <bndbox>
-            <xmin>16</xmin>
-            <ymin>94</ymin>
-            <xmax>32</xmax>
-            <ymax>110</ymax>
-        </bndbox>
-    </object>    <object>
-        <name>bird</name>
-        <pose>Unspecified</pose>
-        <truncated>0</truncated>
-        <difficult>0</difficult>
-        <bndbox>
-            <xmin>148</xmin>
-            <ymin>65</ymin>
-            <xmax>167</xmax>
-            <ymax>84</ymax>
-        </bndbox>
-    </object>    <object>
-        <name>airplane</name>
-        <pose>Unspecified</pose>
-        <truncated>0</truncated>
-        <difficult>0</difficult>
-        <bndbox>
-            <xmin>24</xmin>
+            <xmin>131</xmin>
             <ymin>171</ymin>
-            <xmax>43</xmax>
-            <ymax>190</ymax>
+            <xmax>157</xmax>
+            <ymax>197</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>truck</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>41</xmin>
+            <ymin>34</ymin>
+            <xmax>60</xmax>
+            <ymax>53</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>dog</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>113</xmin>
+            <ymin>113</ymin>
+            <xmax>148</xmax>
+            <ymax>148</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>bird</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>97</xmin>
+            <ymin>79</ymin>
+            <xmax>116</xmax>
+            <ymax>98</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>airplane</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>165</xmin>
+            <ymin>10</ymin>
+            <xmax>181</xmax>
+            <ymax>26</ymax>
         </bndbox>
     </object>    <object>
         <name>ship</name>
@@ -182,10 +182,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>161</xmin>
-            <ymin>2</ymin>
-            <xmax>193</xmax>
-            <ymax>34</ymax>
+            <xmin>57</xmin>
+            <ymin>154</ymin>
+            <xmax>89</xmax>
+            <ymax>186</ymax>
         </bndbox>
     </object>    <object>
         <name>airplane</name>
@@ -193,10 +193,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>164</xmin>
-            <ymin>39</ymin>
-            <xmax>186</xmax>
-            <ymax>61</ymax>
+            <xmin>3</xmin>
+            <ymin>157</ymin>
+            <xmax>35</xmax>
+            <ymax>189</ymax>
         </bndbox>
     </object>    <object>
         <name>automobile</name>
@@ -204,10 +204,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>180</xmin>
-            <ymin>129</ymin>
-            <xmax>202</xmax>
-            <ymax>151</ymax>
+            <xmin>26</xmin>
+            <ymin>75</ymin>
+            <xmax>58</xmax>
+            <ymax>107</ymax>
         </bndbox>
     </object>
 </annotation>

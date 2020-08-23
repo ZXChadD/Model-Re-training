@@ -17,32 +17,32 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>159</xmin>
+            <xmin>171</xmin>
+            <ymin>102</ymin>
+            <xmax>193</xmax>
+            <ymax>124</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>truck</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>208</xmin>
+            <ymin>184</ymin>
+            <xmax>246</xmax>
+            <ymax>222</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>truck</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>203</xmin>
             <ymin>44</ymin>
-            <xmax>181</xmax>
-            <ymax>66</ymax>
-        </bndbox>
-    </object>    <object>
-        <name>truck</name>
-        <pose>Unspecified</pose>
-        <truncated>0</truncated>
-        <difficult>0</difficult>
-        <bndbox>
-            <xmin>113</xmin>
-            <ymin>194</ymin>
-            <xmax>151</xmax>
-            <ymax>232</ymax>
-        </bndbox>
-    </object>    <object>
-        <name>truck</name>
-        <pose>Unspecified</pose>
-        <truncated>0</truncated>
-        <difficult>0</difficult>
-        <bndbox>
-            <xmin>196</xmin>
-            <ymin>115</ymin>
-            <xmax>231</xmax>
-            <ymax>150</ymax>
+            <xmax>241</xmax>
+            <ymax>82</ymax>
         </bndbox>
     </object>    <object>
         <name>airplane</name>
@@ -50,10 +50,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>210</xmin>
-            <ymin>40</ymin>
-            <xmax>242</xmax>
-            <ymax>72</ymax>
+            <xmin>36</xmin>
+            <ymin>135</ymin>
+            <xmax>68</xmax>
+            <ymax>167</ymax>
         </bndbox>
     </object>    <object>
         <name>airplane</name>
@@ -61,10 +61,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>8</xmin>
-            <ymin>69</ymin>
-            <xmax>30</xmax>
-            <ymax>91</ymax>
+            <xmin>43</xmin>
+            <ymin>112</ymin>
+            <xmax>62</xmax>
+            <ymax>131</ymax>
         </bndbox>
     </object>    <object>
         <name>bird</name>
@@ -72,10 +72,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>199</xmin>
-            <ymin>87</ymin>
-            <xmax>225</xmax>
-            <ymax>113</ymax>
+            <xmin>44</xmin>
+            <ymin>182</ymin>
+            <xmax>73</xmax>
+            <ymax>211</ymax>
         </bndbox>
     </object>    <object>
         <name>automobile</name>
@@ -83,10 +83,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>39</xmin>
-            <ymin>192</ymin>
-            <xmax>65</xmax>
-            <ymax>218</ymax>
+            <xmin>120</xmin>
+            <ymin>208</ymin>
+            <xmax>152</xmax>
+            <ymax>240</ymax>
         </bndbox>
     </object>    <object>
         <name>frog</name>
@@ -94,10 +94,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>73</xmin>
-            <ymin>7</ymin>
-            <xmax>92</xmax>
-            <ymax>26</ymax>
+            <xmin>91</xmin>
+            <ymin>102</ymin>
+            <xmax>120</xmax>
+            <ymax>131</ymax>
         </bndbox>
     </object>    <object>
         <name>deer</name>
@@ -105,10 +105,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>91</xmin>
-            <ymin>91</ymin>
-            <xmax>117</xmax>
-            <ymax>117</ymax>
+            <xmin>145</xmin>
+            <ymin>144</ymin>
+            <xmax>180</xmax>
+            <ymax>179</ymax>
         </bndbox>
     </object>    <object>
         <name>bird</name>
@@ -116,10 +116,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>214</xmin>
-            <ymin>197</ymin>
-            <xmax>252</xmax>
-            <ymax>235</ymax>
+            <xmin>69</xmin>
+            <ymin>35</ymin>
+            <xmax>88</xmax>
+            <ymax>54</ymax>
         </bndbox>
     </object>    <object>
         <name>bird</name>
@@ -127,10 +127,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>172</xmin>
-            <ymin>157</ymin>
-            <xmax>198</xmax>
-            <ymax>183</ymax>
+            <xmin>7</xmin>
+            <ymin>61</ymin>
+            <xmax>33</xmax>
+            <ymax>87</ymax>
         </bndbox>
     </object>    <object>
         <name>frog</name>
@@ -139,9 +139,9 @@
         <difficult>0</difficult>
         <bndbox>
             <xmin>211</xmin>
-            <ymin>16</ymin>
-            <xmax>227</xmax>
-            <ymax>32</ymax>
+            <ymin>156</ymin>
+            <xmax>233</xmax>
+            <ymax>178</ymax>
         </bndbox>
     </object>    <object>
         <name>deer</name>
@@ -149,10 +149,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>206</xmin>
-            <ymin>156</ymin>
-            <xmax>241</xmax>
-            <ymax>191</ymax>
+            <xmin>43</xmin>
+            <ymin>23</ymin>
+            <xmax>59</xmax>
+            <ymax>39</ymax>
         </bndbox>
     </object>    <object>
         <name>airplane</name>
@@ -160,10 +160,10 @@
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>2</xmin>
-            <ymin>193</ymin>
-            <xmax>31</xmax>
-            <ymax>222</ymax>
+            <xmin>47</xmin>
+            <ymin>74</ymin>
+            <xmax>79</xmax>
+            <ymax>106</ymax>
         </bndbox>
     </object>
 </annotation>

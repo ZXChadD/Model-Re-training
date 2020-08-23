@@ -2,3 +2,4 @@ models/
 pre-trained-models/
 *DS_Store
 *idea/
+mycreds.txt
