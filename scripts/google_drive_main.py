@@ -9,7 +9,7 @@ gauth.LoadCredentialsFile("mycreds.txt")
 drive = GoogleDrive(gauth)
 
 # train folder for full annotations
-train_file_list = drive.ListFile({'q': "'1bjZHKyNWUW7Dx7iVWV3G2orx4d4b9ZAL' in parents and trashed=false"}).GetList()
+train_file_list = drive.ListFile({'q': "'15vLrWqOj33H-d3gphLUr__27YCBaZZqC' in parents and trashed=false"}).GetList()
 
 # directory to store the files
 train_download_path = '../models/checkpoint_full/train/'
