@@ -9,7 +9,7 @@ gauth.LoadCredentialsFile("mycreds.txt")
 drive = GoogleDrive(gauth)
 
 # train folder for full annotations
-train_file_list = drive.ListFile({'q': "'15vLrWqOj33H-d3gphLUr__27YCBaZZqC' in parents and trashed=false"}).GetList()
+train_file_list = drive.ListFile({'q': "'1HAEC8CQkcgFmGO9YL399AopIYkXTaBRK' in parents and trashed=false"}).GetList()
 
 # directory to store the files
 train_download_path = '../models/checkpoint_full/train/'
@@ -19,7 +19,7 @@ for i, file1 in enumerate(sorted(train_file_list, key=lambda x: x['title']), sta
     print('Downloaded {} from GDrive ({}/{})'.format(file1['title'], i, len(train_file_list)))
 
 # eval folder for full annotations
-eval_file_list = drive.ListFile({'q': "'1CpzHVYzm-ZrXRpXs_j5OU1v6ijz5OQKZ' in parents and trashed=false"}).GetList()
+eval_file_list = drive.ListFile({'q': "'1DHvC7AqnpnSThcvLjHBMf0z8AGeQwH_L' in parents and trashed=false"}).GetList()
 
 # directory to store the files
 eval_download_path = '../models/checkpoint_full/eval/'
