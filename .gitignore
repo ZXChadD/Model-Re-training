@@ -1,5 +1,6 @@
 models/
 pre-trained-models/
+exported_models/
 *DS_Store
 *idea/
 mycreds.txt
