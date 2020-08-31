@@ -18,7 +18,7 @@ REQUIRED_PACKAGES = [
     'tf-slim',
     'six',
     'pycocotools',
-    'scipy==1.4.1',
+    'scipy',
     'pandas',
     # Required to avoid Numpy 1.19.1 conflict with TF 2.3
     'tf-models-official==2.2.2'
