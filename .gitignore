@@ -5,5 +5,6 @@ exported_models/
 *idea/
 utilites/
 images/
+detected_images/
 mycreds.txt
 client_secrets.json
