@@ -6,17 +6,17 @@ from PIL import Image
 import os.path
 import ntpath
 
-sys.path.append("/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/tf/research")
-save_path = "/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/detected_images/expert_res1"
+# sys.path.append("/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/tf/research")
+save_path = "/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/detected_images/new/full_res1"
 
 from object_detection.utils import ops as utils_ops
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 
 # List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = 'annotations/label_map.pbtxt'
+PATH_TO_LABELS = 'annotations/new_annotations/label_map.pbtxt'
 category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS, use_display_name=True)
-PATH_TO_TEST_IMAGES_DIR = pathlib.Path("images/test")
+PATH_TO_TEST_IMAGES_DIR = pathlib.Path("images/new_data/test")
 TEST_IMAGE_PATHS = list(PATH_TO_TEST_IMAGES_DIR.glob("*.jpg"))
 
 
