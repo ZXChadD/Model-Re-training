@@ -37,10 +37,14 @@ def create_training_data():
             coordinates = (x_coordinates, y_coordinates)
             all_coordinates.add(coordinates)
 
-    ####### initialise a writer to create JPEG file #######
+    ####### initialise a writer to create pascal voc file #######
     writer = Writer(
-        '/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/test/' + str(
+        '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/test/' + str(
             bg_id) + '.jpg', 256, 256)
+
+    file = open(
+        "/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/test_ground/" + str(
+            bg_id) + ".txt", "w")
 
     for x in range(0, max_images):
         print("Image Number: " + str(x))
@@ -52,24 +56,32 @@ def create_training_data():
         # once the desired number of images have been placed on the background, create a new background
         if img_on_bg > max_img_on_bg or x == max_images - 1:
             bg.save(
-                '/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/test/' + str(
+                '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/test/' + str(
                     bg_id) + '.jpg', 'JPEG')
             img_on_bg = 1
 
             ####### save pascal voc file #######
             writer.save(
-                '/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/test/' + str(
+                '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/test/' + str(
                     bg_id) + '.xml')
-            bg_id += 1
 
-            bg = Image.new('RGB', (256, 256), (0, 0, 0))
-            all_images = []
-            excluded_coordinates = set()
+            file.close()
 
-            ####### initialise a writer to create JPEG file #######
-            writer = Writer(
-                '/Users/chadd/Documents/Chadd/Work/DSO/Model Re-training/TensorFlow/workspace/training/images/test/' + str(
-                    bg_id) + '.jpg', 256, 256)
+            if not x == max_images - 1:
+                bg_id += 1
+                bg = Image.new('RGB', (256, 256), (0, 0, 0))
+                all_images = []
+                excluded_coordinates = set()
+
+                ####### initialise a writer to create pascal voc file #######
+                writer = Writer(
+                    '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/test/' + str(
+                        bg_id) + '.jpg', 256, 256)
+
+                ####### initialise a writer to create TXT file #######
+                file = open(
+                    "/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/test_ground/" + str(
+                        bg_id) + ".txt", "w")
 
         img_w, img_h = resized_image.size
 
@@ -101,6 +113,8 @@ def create_training_data():
                 ####### add object to pascal voc file #######
                 if name_of_object != 'horse':
                     writer.addObject(name_of_object, x1, 256 - y1, x1 + img_w, 256 - y1 + img_h)
+                    line_of_text = "%s %s %s %s %s\n" % (name_of_object, x1, 256 - y1, x1 + img_w, 256 - y1 + img_h)
+                    file.write(line_of_text)
 
                 # draw rectangles
                 # img1 = ImageDraw.Draw(bg)

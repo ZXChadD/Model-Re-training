@@ -1,0 +1,17 @@
+bird 162 133 184 155
+automobile 30 172 65 207
+cat 185 67 214 96
+cat 194 110 223 139
+automobile 145 187 164 206
+frog 95 38 111 54
+truck 80 61 99 80
+automobile 101 184 133 216
+frog 32 51 58 77
+airplane 146 28 175 57
+automobile 186 1 212 27
+cat 178 200 213 235
+cat 114 67 152 105
+cat 94 93 110 109
+automobile 47 208 76 237
+airplane 4 130 33 159
+bird 72 7 94 29

@@ -3,5 +3,6 @@ pre-trained-models/
 exported_models/
 *DS_Store
 *idea/
+utilites/
 mycreds.txt
 client_secrets.json

@@ -1,0 +1,17 @@
+bird 130 135 149 154
+cat 205 61 227 83
+bird 28 78 47 97
+frog 115 164 137 186
+truck 138 56 164 82
+deer 201 107 233 139
+airplane 2 11 37 46
+automobile 64 193 99 228
+airplane 74 6 103 35
+deer 179 196 205 222
+dog 0 98 35 133
+airplane 96 47 128 79
+ship 197 25 223 51
+airplane 153 7 188 42
+frog 58 43 87 72
+automobile 161 112 193 144
+airplane 159 169 181 191
