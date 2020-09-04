@@ -8,8 +8,8 @@ cifar10_path = '../cifar-10-batches-py'
 width_of_original_image = 32
 height_of_original_image = 32
 max_img_on_bg = 20
-start_image = 0
-max_images = 4000
+start_image = 4000
+max_images = 5000
 
 
 def main():
@@ -39,7 +39,7 @@ def create_training_data():
 
     ####### initialise a writer to create a pascal voc file #######
     writer = Writer(
-        '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/new_data/expert/' + str(
+        '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/new_data/expert_validation/' + str(
             bg_id) + '.jpg', 256, 256)
 
     for x in range(start_image, max_images):
@@ -50,16 +50,15 @@ def create_training_data():
         resized_image = resize_image(images[x])
 
         # once the desired number of images have been placed on the background, create a new background
-        if img_on_bg > max_img_on_bg:
-            # if img_on_bg > max_img_on_bg or x == max_images - 1:
+        if img_on_bg > max_img_on_bg or x == max_images - 1:
             bg.save(
-                '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/new_data/expert/' + str(
+                '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/new_data/expert_validation/' + str(
                     bg_id) + '.jpg', 'JPEG')
             img_on_bg = 1
 
             ####### save pascal voc file #######
             writer.save(
-                '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/new_data/expert/' + str(
+                '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/new_data/expert_validation/' + str(
                     bg_id) + '.xml')
             bg_id += 1
 
@@ -69,7 +68,7 @@ def create_training_data():
 
             ####### initialise a writer to create a pascal voc file #######
             writer = Writer(
-                '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/new_data/expert/' + str(
+                '/Users/chadd/Documents/Chadd/Work/DSO/Model_Re-training/TensorFlow/workspace/training/images/new_data/expert_validation/' + str(
                     bg_id) + '.jpg', 256, 256)
 
         img_w, img_h = resized_image.size
@@ -162,7 +161,7 @@ def noisy(image):
     mean = 1
     # var = 0.1
     # sigma = var ** 0.5
-    gauss = np.random.normal(mean, 20, (row, col, ch))
+    gauss = np.random.normal(mean, 10, (row, col, ch))
     noisy = image + gauss
     return noisy
 

@@ -156,7 +156,7 @@ def noisy(image):
     mean = 1
     # var = 0.1
     # sigma = var ** 0.5
-    gauss = np.random.normal(mean, 20, (row, col, ch))
+    gauss = np.random.normal(mean, 10, (row, col, ch))
     noisy = image + gauss
     return noisy
 
